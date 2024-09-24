@@ -1,0 +1,750 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=SUSE:wght@100..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+    box-sizing: border-box;
+    font-family: 'Work Sans';
+    margin: 0;
+    padding: 0;
+}
+html {
+    /*me permite deslisar cuando ago click en los links del menu*/
+    scroll-behavior: smooth;
+}
+/*Menu */
+.logo a {
+    font-size: 2em;
+    color: #000;
+    text-decoration: none;
+    animation: textAnimation 3s infinite alternate;
+}
+
+@keyframes textAnimation {
+    0% {
+        color: #fff;
+        transform: translateY(0);
+    }
+    50% {
+        color: #6f3fe1;
+        transform: translateY(-10px);
+    }
+    100% {
+        color: #461fa1;
+        transform: translateY(0);
+    }
+}
+
+.contenedor-header {
+    background: #1e2326;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.contenedor-header header {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+.contenedor-header header .logo a{
+    font-size: 45px;
+    font-family: 'SUSE';
+    color: #6f3fe1;
+    text-decoration: none;
+    font-weight: 700;
+}
+.contenedor-header header ul{
+    display: flex;
+    list-style: none;
+}
+.contenedor-header header nav ul li a{
+    text-align: none;
+    color: #fff;
+    margin: 0 20px;
+    padding: 3px;
+    transition: .5s;
+    text-decoration: none;
+}
+.contenedor-header header nav ul li a:hover{
+    color: #6f3fe1;
+}
+.nav-responsive{
+    background-color: #6f3fe1;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+/*SECCION DE INICIO*/
+.inicio{
+    background: linear-gradient(to top, rgba(30,35,38,.8), rgba(30,35,38,1)),url(imagenes/fondoesq.jpg);
+    background-size: cover;
+    height: 100vh;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-right: 850px;
+}
+.inicio .contenido-banner{
+    padding: 5px;
+    background-color: #1e2326;
+    max-width: 360px;
+    margin: auto;
+    text-align: center;
+    border-radius: 40px;
+}
+.inicio .contenido-banner img{
+margin-top: 40px;
+border: 10px solid #461fa1;
+display: block;
+width: 80%;
+margin: auto;
+border-radius: 100%;
+}
+.inicio .contenido-banner h1{
+    margin-top: 30px;
+    font-size: 32px;
+    font-family: 'SUSE';
+}
+.inicio .contenido-banner h2{
+    font-size: 15px;
+    font-weight: normal;
+}   
+.inicio .contenido-banner .redes a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;
+}
+.inicio .contenido-banner .redes a:hover{
+background-color: #461fa1;
+}
+
+/*Seccion Sobre mi*/
+.sobremi{
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 20px;
+}
+.sobremi .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.sobremi h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+
+}
+.sobremi .contenido-seccion p{
+font: 18px;
+line-height: 22px;
+margin-bottom: 20px;
+}
+.sobremi .contenido-seccion p span{
+    color: #6f3fe1;
+    font-weight: 700;
+}
+.sobremi .fila{
+    display: flex;
+}
+.sobremi .fila .col{
+width: 50%;
+}
+.sobremi .fila .col h3{
+font-size: 28px;
+font-family: 'Righteous';
+margin-bottom: 25px;
+}
+.sobremi .fila .col ul{
+    list-style: none;
+}
+.sobremi .fila .col ul li{
+    margin: 12px 0;
+}
+.sobremi .fila .col ul li strong{
+    display: inline-block;
+    color: #6f3fe1;
+    width: 130px;
+}
+.sobremi .fila .col ul li span{
+    background-color: #6f3fe1;
+    padding: 3px;
+    font-weight: 700;
+    border-radius: 5px;
+}
+.sobremi .fila .col .contenedor-intereces{
+    display: flex;
+    flex-wrap: wrap;
+}
+.sobremi .fila .col .contenedor-intereces .intereces{
+    width: 100px;
+    height: 100px;
+    background-color: #252A2E;
+    border-radius: 10px;
+    margin: 0 15px 15px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+}
+.sobremi .fila .col .contenedor-intereces .intereces:hover{
+background-color: #461fa1;
+}
+.sobremi .fila .col .contenedor-intereces .intereces i{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.sobremi button {
+    cursor: pointer;
+    background-color: #6f3fe1; /* Fondo morado */
+    border: 2px solid transparent; /* Borde inicial transparente */
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff; /* Texto blanco */
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s, transform 0.3s, border 0.3s; /* Transiciones suaves */
+    position: relative; /* Para el efecto de overlay */
+}
+.sobremi button:hover {
+    background-color: #461fa1; /* Cambio de color al hacer hover */
+    transform: scale(1.05); /* Aumentar tamaño al hacer hover */
+}
+.sobremi button .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #461fa1; /* Fondo del overlay */
+    z-index: -1;
+    transition: width 0.5s; /* Transición más rápida para el overlay */
+}
+.sobremi button:hover .overlay {
+    width: 100%; /* Mostrar el overlay al hacer hover */
+}
+/*Seccion Datos Academicos*/
+.datosacademicos{
+    background-color: #252a2e;
+    color: #fff;
+    padding: 50px 0;
+}
+.datosacademicos .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.datosacademicos h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.datosacademicos .fila{
+    display: flex;
+}
+.datosacademicos .fila .col{
+    width: 50%;
+    padding: 0 20px;
+}
+.datosacademicos .fila .col h3{
+    font-size: 28px;
+    font-family: 'Righteous';
+    margin-bottom: 25px;
+}
+.datosacademicos .datosacademico > span{
+font-weight: 700;
+display: block;
+margin-bottom: 10px;
+}
+.datosacademicos .datosacademico .barra-datosacademico{
+    height: 8px;
+    width: 80%;
+    background-color: #131517;
+    position: relative;
+    margin-bottom: 30px;
+}
+.datosacademicos .datosacademico .progreso{
+    background-color: #461fa1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 8px;
+}
+.datosacademicos .datosacademico .barra-datosacademico span{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #461fa1;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    top: -17px;
+    right: -15px;
+    font-size: 14px;
+}
+/* Efecto de brillo al pasar el mouse */
+.datosacademicos .datosacademico:hover .progreso,
+.datosacademicos .datosacademico:hover .barra-datosacademico span {
+    animation: glow 1.5s infinite alternate; /* Aplicar animación de brillo */
+}
+
+.datosacademicos .datosacademico .javascript{
+    width: 0%;
+    animation: 2s javascript forwards;
+}
+@keyframes javascript {
+    0%{width: 0%;}
+    100%{width: 75%;}
+}
+
+.datosacademicos .datosacademico .htmlcss{
+    width: 0%;
+    animation: 2s htmlcss forwards;
+}
+@keyframes htmlcss {
+    0%{width: 0%;}
+    100%{width: 62%;}
+}
+
+.datosacademicos .datosacademico .java{
+    width: 0%;
+    animation: 2s java forwards;
+}
+@keyframes java {
+    0%{width: 0%;}
+    100%{width: 75%;}
+}
+
+.datosacademicos .datosacademico .mysql{
+    width: 0%;
+    animation: 2s mysql forwards;
+}
+@keyframes mysql {
+    0%{width: 0%;}
+    100%{width: 87%;}
+}
+
+.datosacademicos .datosacademico .postgresql{
+    width: 0%;
+    animation: 2s postgresql forwards;
+}
+@keyframes postgresql {
+    0%{width: 0%;}
+    100%{width: 85%;}
+}
+
+.datosacademicos .datosacademico .comunicacion{
+    width: 0%;
+    animation: 2s comunicacion forwards;
+}
+@keyframes comunicacion {
+    0%{width: 0%;}
+    100%{width: 95%;}
+}
+
+.datosacademicos .datosacademico .trabajo{
+    width: 0%;
+    animation: 2s trabajo forwards;
+}
+@keyframes trabajo {
+    0%{width: 0%;}
+    100%{width: 89%;}
+}
+
+.datosacademicos .datosacademico .creatividad{
+    width: 0%;
+    animation: 2s creatividad forwards;
+}
+@keyframes creatividad {
+    0%{width: 0%;}
+    100%{width: 85%;}
+}
+
+.datosacademicos .datosacademico .dedicacion{
+    width: 0%;
+    animation: 2s dedicacion forwards;
+}
+@keyframes dedicacion {
+    0%{width: 0%;}
+    100%{width: 90%;}
+}
+
+.datosacademicos .datosacademico .proyecto{
+    width: 0%;
+    animation: 2s proyecto forwards;
+}
+@keyframes proyecto {
+    0%{width: 0%;}
+    100%{width: 95%;}
+}
+/* Sección de Gustos con temática anime */
+.gustos {
+    background: linear-gradient(145deg, #1a1c1f, #252a2e);
+    color: #fff;
+    padding: 60px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Fondo de una mancha */
+.gustos::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -50px;
+    width: 300px;
+    height: 300px;
+    background: url(imagenes/manchas.png);
+    background-size: contain;
+    opacity: 0.3;
+    transform: rotate(45deg);
+}
+
+.gustos::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    right: -50px;
+    width: 300px;
+    height: 300px;
+    background: url(imagenes/manchas.png);
+    background-size: contain;
+    opacity: 0.3;
+    transform: rotate(-45deg);
+}
+
+.gustos .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+    position: relative;
+    z-index: 2;
+}
+
+.gustos h2 {
+    font-size: 50px;
+    font-family: 'Righteous', sans-serif;
+    text-align: center;
+    padding: 20px 0;
+    color: #6f3fe1;
+    text-shadow: 2px 2px 10px #461fa1;
+}
+
+.gustos .fila {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.gustos .fila .col {
+    width: 49%;
+    padding: 0 20px;
+}
+
+.gustos .fila .col h3 {
+    font-size: 30px;
+    font-family: 'Righteous', sans-serif;
+    margin-bottom: 25px;
+    color: #6f3fe1;
+    text-shadow: 1px 1px 8px #6f3fe1;
+    border-bottom: 2px solid #6f3fe1;
+    padding-bottom: 10px;
+}
+
+.gustos .fila .item {
+    padding: 25px;
+    margin-bottom: 30px;
+    background-color: #1f2226;
+    border: 2px solid #6f3fe1;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gustos .fila .item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(111, 63, 225, 0.8);
+}
+
+.gustos .fila .item h4 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 5px #6f3fe1;
+}
+
+.gustos .fila .item .casa,
+.gustos .fila .item .fecha {
+    color: #6f3fe1;
+    font-size: 20px;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.gustos .fila .item p {
+    line-height: 24px;
+    color: #b3b3b3;
+    font-family: 'Poppins', sans-serif;
+}
+
+.gustos .fila .izquierda {
+    border-right: 2px solid #6f3fe1;
+    margin-right: 20px;
+}
+
+.gustos .fila .derecha {
+    border-left: 2px solid #6f3fe1;
+    margin-left: 20px;
+}
+
+/* Conectores estilo espadas */
+.gustos .fila .item .conectori,
+.gustos .fila .item .conectord {
+    height: 4px;
+    background-color: #6f3fe1;
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+}
+
+.gustos .fila .item .conectori {
+    width: 50px;
+    right: -50px;
+}
+
+.gustos .fila .item .conectori .circuloi{
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #6f3fe1;
+    float: right;
+    position: relative;
+    bottom: 3px;
+}
+.gustos .fila .item .conectord .circulod{
+    display: block;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #6f3fe1;
+    float: left;
+    position: relative;
+    bottom: 3px;
+}
+
+.gustos .fila .item .conectord {
+    width: 50px;
+    left: -50px;
+}
+
+/* Sección de portafolio con estilo temático */
+.portafolio {
+    background-color: #1e2326; /* Un tono más oscuro para el fondo */
+    color: #fff;
+    padding: 50px 0;
+    position: relative;
+}
+.portafolio .contenido-seccion {
+    max-width: 1100px;
+    margin: auto;
+    text-align: center; /* Centrado de todo el contenido */
+}
+.portafolio h2 {
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+    color: #6f3fe1; /* Color morado para el título */
+}
+.portafolio .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centrado en lugar de 'space-around' */
+}
+.portafolio .galeria .proyecto {
+    position: relative;
+    max-width: 340px;
+    height: fit-content;
+    margin: 15px; /* Espaciado más amplio */
+    cursor: pointer;
+    transition: transform 0.3s; /* Añadir transición al hover */
+}
+.portafolio .galeria .proyecto:hover {
+    transform: scale(1.05); /* Aumentar el tamaño ligeramente al pasar el ratón */
+}
+.portafolio .galeria .proyecto img {
+    width: 100%;
+    display: block;
+    border-radius: 8px; /* Bordes redondeados para las imágenes */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra suave para profundidad */
+}
+.portafolio .galeria .proyecto .overlay {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    background: linear-gradient(rgba(111, 63, 225, 0.8), rgba(111, 63, 225, 0.3)); /* Gradiente morado */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* Centrar texto vertical y horizontalmente */
+    transition: opacity 0.3s; /* Suavizar la transición */
+    font-size: 18px;
+    letter-spacing: 2px;
+    opacity: 0;
+    border-radius: 8px; /* Bordes redondeados para el overlay */
+}
+.portafolio .galeria .proyecto .overlay h3 {
+    margin-bottom: 20px;
+    transition: margin-bottom 0.3s; /* Transición suave para el título */
+    color: #fff; /* Color blanco para el texto */
+}
+.portafolio .galeria .proyecto:hover .overlay {
+    opacity: 1; /* Mostrar overlay al pasar el ratón */
+}
+.portafolio .galeria .proyecto:hover .overlay h3 {
+    margin-bottom: 10px; /* Reduce el margen al hacer hover */
+}
+/*Seccion de Contacto*/
+.contacto{
+    background-image: url(imagenes/mapa.jpg);
+    background-color: #1e2326;
+    color: #fff;
+    padding: 50px 0;
+}
+.contacto .contenido-seccion{
+    max-width: 1100px;
+    margin: auto;
+}
+.contacto h2{
+    font-size: 48px;
+    font-family: 'Righteous';
+    text-align: center;
+    padding: 20px 0;
+}
+.contacto .fila{
+    display: flex;
+}
+.contacto .col{
+    width: 50%;
+    padding: 10px;
+    position: relative;
+}
+.contacto .col input, .contacto .col textarea{
+    display: block;
+    width: 100%;
+    padding: 18px;
+    border: none;
+    margin-bottom: 20px;
+    background-color: #252A2E;
+    color: #fff;
+    font-size: 18px;
+}
+.contacto button{
+    cursor: pointer;
+    background-color: transparent;
+    border: 2px solid #fff;
+    width: fit-content;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 22px;
+    font-size: 16px;
+    color: #fff;
+    position: relative;
+    z-index: 10; 
+}
+.contacto button .overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #6f3fe1;
+    z-index: -1;
+    transition: 1s;
+}
+.contacto button:hover .overlay{
+    width: 100%;
+}
+.contacto .col img{
+    width: 100%;
+}
+.contacto .col .info{
+    position: absolute;
+    top: 45%;
+    background-color: #252A2E;
+    padding: 20px;
+    max-width: 350px;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+.contacto .col .info ul{
+    list-style: none;
+}
+.contacto .col .info ul li{
+    margin-bottom: 20px;
+}
+.contacto .col .info ul li i{
+    color: #461fa1;
+    display: inline-block;
+    margin-right: 20px;
+}
+footer{
+    background-color: #252A2E;
+    color: #fff;
+    padding: 50px 0 30px 0;
+    text-align: center;
+    position: relative;
+    width: 100%;
+}
+footer .redes{
+    margin-bottom: 20px;
+}
+footer .redes a{
+    color: #fff;
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 100%;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    margin: 40px 5px;
+    font-size: 20px;
+    transition: .3s;  
+}
+footer .arriba{
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #461fa1;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -25px;
+    border-radius: 50%;
+    line-height: 50px;
+    font-size: 18px;
+}
